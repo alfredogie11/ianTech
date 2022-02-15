@@ -36,10 +36,10 @@ if(!isset($_SESSION['query'])){
 </nav>
 
 <form id="filter" class="flex-box-row padding-all-15" style="justify-content: start;margin: 1rem" method="post" action="changeQuery.php">
-    <button name="action" value="0" type="submit" class="primary-btn" style="color: var(--primary-color);margin-right:2rem;background: #eeeded;border-radius: 0;font-size: 1.4rem!important;" >
+    <button name="action" value="0" type="submit" class="primary-btn" style="color: var(--primary-color);margin-right:2rem;background: #cec8c8;border-radius: 0;font-size: 1.4rem!important;<?php if($_SESSION['action_cat']=="0"){echo "background:darkgrey;color:white";}?>">
         Computer
     </button>
-    <button name="action" value="1" type="submit" class="primary-btn" style="color: var(--primary-color);margin-right: 0.5rem;background: #eeeded;border-radius: 0;font-size: 1.4rem!important;" >
+    <button name="action" value="1" type="submit" class="primary-btn" style="color: var(--primary-color);margin-right: 0.5rem;background: #eeeded;border-radius: 0;font-size: 1.4rem!important;<?php if($_SESSION['action_cat']=="1"){echo "background:darkgrey;color:white";}?>" >
         Cellphone
     </button>
 </form>
