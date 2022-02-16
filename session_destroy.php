@@ -1,8 +1,8 @@
 <?php
 session_start();
-unset( $_SESSION['username']);
-unset( $_SESSION['acc_type']);
+$_SESSION['username']="";
+$_SESSION['acc_type']="";
 if(isset($_SESSION['query'])){
-    unset( $_SESSION['query']);
+   $_SESSION['query']="SELECT * FROM items ORDER BY category DESC";
 }
 header("location:index.php");

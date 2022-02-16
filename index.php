@@ -6,9 +6,6 @@ if(isset($_SESSION['username'])&&$_SESSION['acc_type']==0){
 else if(isset($_SESSION['username'])&&$_SESSION['acc_type']==1){
     header("location:store.php");
 }
-if(!isset($_SESSION['show_err'])){
-    $_SESSION['show_err']=0;
-}
 ?>
 
 <!DOCTYPE html>
@@ -52,27 +49,6 @@ if(!isset($_SESSION['show_err'])){
        <img src="img/as2.jpg" style="width: 100%; height: 100vh">
     </div>
 </div>
-
-<script>
-    function showError () {
-        document.getElementById("err-msg").style.visibility = "visible"
-    }
-    function hideError() {
-        document.getElementById("err-msg").style.visibility = "hidden"
-    }
-
-    document.getElementById("uname").addEventListener("click",hideError)
-    document.getElementById("pwd").addEventListener("click",hideError)
-
-
-</script>
-
-<?php
-if($_SESSION['show_err']==1){
-    echo "<script>showError()</script>";
-    $_SESSION['show_err']=0;
-}
-?>
 
 </body>
 </html>

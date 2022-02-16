@@ -1,11 +1,7 @@
 <?php
 session_start();
-if(!isset($_SESSION['username'])|| $_SESSION['acc_type']!=0){
+if($_SESSION['username']==""|| $_SESSION['acc_type']!=0){
     header("location:index.php");
-    exit();
-}
-if(isset($_SESSION['item_id'])){
-    unset($_SESSION['item_id']);
 }
 ?>
 <!DOCTYPE html>

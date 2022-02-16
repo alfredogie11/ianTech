@@ -1,8 +1,7 @@
 <?php
 session_start();
-if(!isset($_SESSION['username'])|| $_SESSION['acc_type']!=1){
+if($_SESSION['username']==""|| $_SESSION['acc_type']!=1){
     header("location:index.php");
-    exit();
 }
 $uname = $_SESSION['username'];
 $conn = mysqli_connect("localhost","root","","store");
@@ -71,31 +70,5 @@ if(!isset($_SESSION['query'])){
     </div>
 </div><!--end of main cont-->
 
-
-<style>
-    .item{
-        flex: 0 1 30%;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        padding: 0.5rem;
-        box-shadow: -1px 2px 24px 0px rgba(0,0,0,0.4);
-        -webkit-box-shadow: -1px 2px 24px 0px rgba(0,0,0,0.4);
-        -moz-box-shadow: -1px 2px 24px 0px rgba(0,0,0,0.4);
-        border-radius: 0.3rem;
-        height: 50vh;
-        margin: 0.5rem 1rem;
-    }
-    .item:hover{
-        cursor: pointer;
-    }
-    .item img{
-       height: fit-content;
-        width: fit-content;
-        max-height: 20vh;
-        max-width: 60%;
-    }
-</style>
 </body>
 </html>
