@@ -18,7 +18,6 @@ if(isset($_POST["ch"])){
 
 $action = $_POST["action"];
 $conn = mysqli_connect("localhost","root","","store");
-$query = mysqli_query($conn,"SELECT * FROM items");
 
 if($action=="2"){
     foreach ($ch as $item_id){
